@@ -1,0 +1,16 @@
+.topUnivers {
+    padding-bottom: 77px;
+
+    &__title {
+        font-family: "BebasNeue";
+        font-weight: 700;
+        font-size: 70px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    &__list {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr;
+    }
+}

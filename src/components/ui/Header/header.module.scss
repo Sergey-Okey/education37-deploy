@@ -1,0 +1,72 @@
+@include breakpoint('desktop') {}
+
+
+.header {
+  width: 100%;
+  padding: 15px 0;
+  z-index: 999;
+
+  &_container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 999;
+
+    .logo {
+      font-family: 'BebasNeue';
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 32.4px;
+      text-align: left;
+      text-wrap: nowrap;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      z-index: 999;
+
+      a {
+        font-family: Montserrat;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        text-wrap: nowrap;
+      }
+
+      .search {
+        display: flex;
+        padding: 13px 20px;
+        border: solid 1px color('border', 'gold');
+        gap: 10px;
+        background-color: inherit;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 24px;
+        text-align: left;
+        font-family: 'Montserrat';
+        border-radius: 5px;
+
+        &:focus,
+        &::placeholder {
+          color: #FFFFFF;
+          outline: none;
+        }
+      }
+
+      .search_container {
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 16px;
+          right: 16px;
+        }
+      }
+    }
+  }
+
+}

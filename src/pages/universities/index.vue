@@ -1,0 +1,3 @@
+<template>
+  Университеты
+</template>

@@ -1,0 +1,3 @@
+<template>
+  Специальность
+</template>

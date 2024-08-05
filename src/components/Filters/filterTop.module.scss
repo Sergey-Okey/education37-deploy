@@ -1,0 +1,121 @@
+.filter {
+	width: 100%;
+	background-color: color('filter','background');
+	padding: 40px;
+	border-bottom: 1px solid rgba(255, 255, 255, 1);
+	margin-top: 45px;
+	margin-bottom: 70px;
+
+	&_content {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	.dropdown {
+		position: relative;
+		flex: 1;
+		height: 100%;
+		max-height: 55px;
+		display: flex;
+		flex-wrap: wrap;
+		user-select: none;
+
+		&_select_container,
+		&_input_container {
+			width: 100%;
+		}
+
+		&_select,
+		&_input {
+			width: 100%;
+			max-height: 55px;
+			display: flex;
+			text-wrap: nowrap;
+			gap: 10px;
+			justify-content: space-between;
+			align-items: center;
+			padding: 18px 20px;
+			border-radius: 5px;
+			border: 1px solid color('border', 'gold');
+			background-color: inherit;
+			color: color("text", "main");
+			font-size: 16px;
+			font-weight: 500;
+			line-height: 24px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: color('hover', 'gold');
+			}
+
+			&:focus,
+			&::placeholder {
+				color: color('text', 'main');
+				outline: none;
+			}
+		}
+
+		&_options {
+			position: absolute;
+			top: 105%;
+			left: 0;
+			width: 100%;
+			border: 1px solid color("border", "gold");
+			border-radius: 5px;
+			background-color: color("option", "gold");
+			color: #fff;
+			z-index: 1000;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		&_option {
+			padding: 10px 20px;
+			cursor: pointer;
+
+			&:hover {
+				background-color: color('hover', 'gold');
+			}
+		}
+
+		&_input_container img {
+			position: absolute;
+			right: 15px;
+			color: rgba(181, 152, 129, 1);
+			cursor: pointer;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+
+		button {
+			justify-content: center;
+			height: 100%;
+			display: flex;
+			background-color: color("button", "background");
+			padding: 18px 40px;
+			border-radius: 5px;
+			color: black;
+			font-family: 'Montserrat';
+			font-size: 16px;
+			font-weight: 700;
+			cursor: pointer;
+			height: 100%;
+			flex: 1;
+
+			&:hover {
+				background-color: color("button", "hover");
+			}
+		}
+
+		// Изменение иконки при открытии списка
+		&_select.active .dropdown_icon {
+			transform: rotate(180deg);
+		}
+	}
+}

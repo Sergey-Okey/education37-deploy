@@ -1,0 +1,47 @@
+$colors: (
+  'text': ('main': #fff,
+    'univer': #B6A08F,
+    'trashary': #999999,
+    'specialties': rgba(255, 255, 255, 0.5),
+    'special': rgba(255, 255, 255, 0.05),
+    'header': linear-gradient(270deg, #fff 40%, #8e6d52 100%)),
+  'main': ('background': #2F2F2F,
+  ),
+  'link': ('footer': #fff,
+  ),
+  'button': ('background': #b59881,
+    'specialties': rgba(255, 255, 255, 0.05),
+    'hover':rgba(181, 152, 129, 0.9),
+  ),
+  'border': ('gold':#B59881,
+  ),
+  'filter': ('background': #393939,
+  ),
+  'hover': ('gold':rgba(161, 150, 129, 0.1),
+  ),
+  'option': ('gold':rgba(57, 57, 57, 1),
+  ),
+  'primary': ('red': #610F37,
+    'blue': #173E63,
+    'danger': #D12A4B,
+    'success': #47B25C,
+    'warning': #E5AF22,
+  )
+);
+
+@function color($key, $type: 'base') {
+  $map: map-get($colors, $key);
+  @return map-get($map, $type);
+}
+
+// @function rgba2hex($r, $g, $b, $a: 1) {
+//   $alpha: if($a != 1, $a, 1);
+//   $hex: str-slice(#{floor($r + 256)}, 2) + str-slice(#{floor($g + 256)}, 2) + str-slice(#{floor($b + 256)}, 2);
+
+//   @if $alpha != 1 {
+//     $a: floor($alpha * 255);
+//     $hex: $hex + str-slice(#{floor($a + 256)}, 2);
+//   }
+
+//   @return $hex;
+// }
